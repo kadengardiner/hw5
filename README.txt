@@ -4,17 +4,17 @@ Email: kaden_gardiner@student.uml.edu
 Date: December 2025
 
 PROJECT DESCRIPTION
--------------------
+----------------------------------------------------------------------------
 This is a one-line Scrabble game built with HTML, CSS, and JavaScript.
 It uses jQuery UI for drag-and-drop functionality. Players can drag letter
 tiles from their rack onto the board to form words and score points.
 
 HOW TO RUN
 ----------
-Visit:
+Visit: https://kadengardiner.github.io/hw5/
 
 IMPLEMENTED FEATURES
---------------------
+-----------------------------------------------------------------------------
 All features are fully working:
 
 - Random tile distribution from proper Scrabble tile bag (100 tiles total)
@@ -32,7 +32,7 @@ All features are fully working:
 - Tiles remaining counter shows how many tiles are left in the bag
 
 SOURCES AND CREDITS
--------------------
+----------------------------------------------------------------------------
 - jQuery UI library for drag-and-drop: https://jqueryui.com/
 
 

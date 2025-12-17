@@ -14,11 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrabble Game - HW5</title>
-
-    <!-- My custom styles -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- jQuery UI for drag-and-drop - from https://jqueryui.com/ -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -27,7 +23,6 @@
     <div class="container">
         <h1>Scrabble Game</h1>
 
-        <!-- Score section - displays current word score, total score, and remaining tiles -->
         <div class="game-info">
             <div class="score-display">
                 <h2>Current Word Score: <span id="current-score">0</span></h2>
@@ -36,8 +31,6 @@
             </div>
         </div>
 
-        <!-- Scrabble Board (One Line) - 9 squares with different bonus types
-             Each square has data-position to track its location and data-bonus for scoring -->
         <div id="board-container">
             <h3>Scrabble Board</h3>
             <div id="board">
@@ -53,14 +46,11 @@
             </div>
         </div>
 
-        <!-- Tile Rack - where the player's 7 tiles live
-             Tiles are dynamically added here by JavaScript -->
         <div id="rack-container">
             <h3>Your Tiles</h3>
             <div id="tile-rack"></div>
         </div>
 
-        <!-- Game Controls - buttons to interact with the game -->
         <div class="controls">
             <button id="submit-word">Submit Word</button>
             <button id="clear-board">Clear Board</button>
@@ -68,7 +58,6 @@
             <button id="restart-game">Restart Game</button>
         </div>
 
-        <!-- Message area for feedback to the user -->
         <div id="message"></div>
     </div>
 
