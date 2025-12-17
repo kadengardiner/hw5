@@ -16,7 +16,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #d4c5a9;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -27,15 +27,23 @@ body {
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    background-color: white;
+    background-color: #f5f5f0;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 3px solid #2d5016;
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #2d5016;
+    margin-bottom: 10px;
+}
+
+.author {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -44,15 +52,22 @@ h1 {
     margin-bottom: 30px;
 }
 
-.score-display h2 {
-    display: inline-block;
-    margin: 0 20px;
-    color: #2c5f2d;
+.score-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.score-display h3 {
-    margin-top: 10px;
-    color: #666;
+.score-item {
+    color: #2d5016;
+    font-size: 16px;
+}
+
+.score-item strong {
+    color: #2d5016;
+    font-size: 18px;
 }
 
 #board-container {
@@ -62,7 +77,7 @@ h1 {
 #board-container h3 {
     text-align: center;
     margin-bottom: 15px;
-    color: #444;
+    color: #2d5016;
 }
 
 #board {
@@ -71,7 +86,7 @@ h1 {
     gap: 2px;
     margin: 20px auto;
     padding: 10px;
-    background-color: #ddd;
+    background-color: #8b7355;
     width: fit-content;
     border-radius: 5px;
 }
@@ -79,37 +94,37 @@ h1 {
 .board-square {
     width: 75px;
     height: 75px;
-    border: 2px solid #999;
+    border: 2px solid #4a4a4a;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     font-size: 12px;
     position: relative;
-    background-color: #e8d4a0;
+    background-color: #c9b896;
 }
 
 .board-square.normal {
-    background-color: #e8d4a0;
+    background-color: #c9b896;
 }
 
 .board-square.double-letter {
-    background-color: #add8e6;
-    color: #0066cc;
+    background-color: #8fbc8f;
+    color: white;
 }
 
 .board-square.double-word {
-    background-color: #ffb6c1;
-    color: #cc0066;
+    background-color: #2d5016;
+    color: white;
 }
 
 .board-square.triple-letter {
-    background-color: #4169e1;
+    background-color: #4a7c59;
     color: white;
 }
 
 .board-square.triple-word {
-    background-color: #ff6347;
+    background-color: #1a3a0f;
     color: white;
 }
 
@@ -120,7 +135,7 @@ h1 {
 #rack-container h3 {
     text-align: center;
     margin-bottom: 15px;
-    color: #444;
+    color: #2d5016;
 }
 
 #tile-rack {
@@ -129,10 +144,11 @@ h1 {
     gap: 5px;
     min-height: 100px;
     padding: 20px;
-    background-color: #8b6f47;
+    background-color: #8b7355;
     border-radius: 5px;
     margin: 0 auto;
     width: fit-content;
+    border: 2px solid #2d5016;
 }
 
 .tile {
@@ -165,7 +181,7 @@ h1 {
     padding: 12px 25px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #2d5016;
     color: white;
     border: none;
     border-radius: 5px;
@@ -173,23 +189,23 @@ h1 {
 }
 
 .controls button:hover {
-    background-color: #45a049;
+    background-color: #4a7c59;
 }
 
 #restart-game {
-    background-color: #f44336;
+    background-color: #3d3d3d;
 }
 
 #restart-game:hover {
-    background-color: #da190b;
+    background-color: #1a1a1a;
 }
 
 #clear-board {
-    background-color: #ff9800;
+    background-color: #8b7355;
 }
 
 #clear-board:hover {
-    background-color: #e68900;
+    background-color: #6b5535;
 }
 
 #message {
@@ -204,7 +220,7 @@ h1 {
 
 .success {
     background-color: #d4edda;
-    color: #155724;
+    color: #2d5016;
 }
 
 .error {
@@ -213,6 +229,6 @@ h1 {
 }
 
 .info {
-    background-color: #d1ecf1;
-    color: #0c5460;
+    background-color: #e8f5e9;
+    color: #2d5016;
 }

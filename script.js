@@ -41,7 +41,7 @@ var ScrabbleTiles = {
     "X": { "value": 8, "original-distribution": 1, "number-remaining": 1 },
     "Y": { "value": 4, "original-distribution": 2, "number-remaining": 2 },
     "Z": { "value": 10, "original-distribution": 1, "number-remaining": 1 },
-    "_": { "value": 0, "original-distribution": 2, "number-remaining": 2 }  // Blank tile
+    "Blank": { "value": 0, "original-distribution": 2, "number-remaining": 2 }  // Blank tile
 };
 
 // Game state object - keeps track of scores and what tiles the player has
@@ -279,25 +279,6 @@ function setupEventHandlers() {
     // Clear board button - returns all tiles to rack without scoring
     $('#clear-board').click(function() {
         clearBoard();
-    });
-
-    // New tiles button - returns current tiles and deals 7 fresh ones
-    $('#new-tiles').click(function() {
-        // Return tiles on the rack to the bag
-        $('#tile-rack .tile').each(function() {
-            var letter = $(this).attr('data-letter');
-            ScrabbleTiles[letter]["number-remaining"]++;
-        });
-
-        // Clear the rack
-        $('#tile-rack').empty();
-
-        // Reset player tiles array
-        gameState.playerTiles = [];
-
-        // Deal 7 new tiles
-        dealTiles();
-        showMessage("New tiles dealt!", "success");
     });
 
     // Restart game button - resets everything
