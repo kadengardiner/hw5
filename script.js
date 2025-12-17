@@ -281,14 +281,23 @@ function setupEventHandlers() {
         clearBoard();
     });
 
-    // New tiles button - deals more tiles (if player has less than 7)
+    // New tiles button - returns current tiles and deals 7 fresh ones
     $('#new-tiles').click(function() {
-        if (gameState.playerTiles.length < 7) {
-            dealTiles();
-            showMessage("New tiles dealt!", "success");
-        } else {
-            showMessage("You already have 7 tiles. Submit a word first!", "error");
-        }
+        // Return tiles on the rack to the bag
+        $('#tile-rack .tile').each(function() {
+            var letter = $(this).attr('data-letter');
+            ScrabbleTiles[letter]["number-remaining"]++;
+        });
+
+        // Clear the rack
+        $('#tile-rack').empty();
+
+        // Reset player tiles array
+        gameState.playerTiles = [];
+
+        // Deal 7 new tiles
+        dealTiles();
+        showMessage("New tiles dealt!", "success");
     });
 
     // Restart game button - resets everything
