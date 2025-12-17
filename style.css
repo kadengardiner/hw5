@@ -1,0 +1,218 @@
+/*
+ * File: style.css
+ * Author: Kaden Gardiner
+ * Email: kaden_gardiner@student.uml.edu
+ * Date: December 2025
+ * Description: CSS styling for the one-line Scrabble game. Handles layout,
+ *              colors for bonus squares, tile rack design, and button styles.
+ * Assignment: HW5 - Scrabble
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.game-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.score-display h2 {
+    display: inline-block;
+    margin: 0 20px;
+    color: #2c5f2d;
+}
+
+.score-display h3 {
+    margin-top: 10px;
+    color: #666;
+}
+
+#board-container {
+    margin: 30px 0;
+}
+
+#board-container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+#board {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ddd;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+.board-square {
+    width: 75px;
+    height: 75px;
+    border: 2px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    position: relative;
+    background-color: #e8d4a0;
+}
+
+.board-square.normal {
+    background-color: #e8d4a0;
+}
+
+.board-square.double-letter {
+    background-color: #add8e6;
+    color: #0066cc;
+}
+
+.board-square.double-word {
+    background-color: #ffb6c1;
+    color: #cc0066;
+}
+
+.board-square.triple-letter {
+    background-color: #4169e1;
+    color: white;
+}
+
+.board-square.triple-word {
+    background-color: #ff6347;
+    color: white;
+}
+
+#rack-container {
+    margin: 30px 0;
+}
+
+#rack-container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+#tile-rack {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    min-height: 100px;
+    padding: 20px;
+    background-color: #8b6f47;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.tile {
+    width: 75px;
+    height: 75px;
+    cursor: move;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tile img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.ui-draggable-dragging {
+    z-index: 1000;
+}
+
+.controls {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.controls button {
+    margin: 5px 10px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #45a049;
+}
+
+#restart-game {
+    background-color: #f44336;
+}
+
+#restart-game:hover {
+    background-color: #da190b;
+}
+
+#clear-board {
+    background-color: #ff9800;
+}
+
+#clear-board:hover {
+    background-color: #e68900;
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}

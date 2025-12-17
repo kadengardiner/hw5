@@ -1,0 +1,77 @@
+<!--
+    File: index.html
+    Author: Kaden Gardiner
+    Email: kaden_gardiner@student.uml.edu
+    Date: December 2025
+    Description: HTML structure for a one-line Scrabble game. This is the main page
+                 that sets up the board, tile rack, and controls for the game.
+    Assignment: HW5 - Scrabble
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble Game - HW5</title>
+
+    <!-- My custom styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery UI for drag-and-drop - from https://jqueryui.com/ -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Scrabble Game</h1>
+
+        <!-- Score section - displays current word score, total score, and remaining tiles -->
+        <div class="game-info">
+            <div class="score-display">
+                <h2>Current Word Score: <span id="current-score">0</span></h2>
+                <h2>Total Score: <span id="total-score">0</span></h2>
+                <h3>Tiles Remaining: <span id="tiles-remaining">100</span></h3>
+            </div>
+        </div>
+
+        <!-- Scrabble Board (One Line) - 9 squares with different bonus types
+             Each square has data-position to track its location and data-bonus for scoring -->
+        <div id="board-container">
+            <h3>Scrabble Board</h3>
+            <div id="board">
+                <div class="board-square normal" data-position="0"></div>
+                <div class="board-square double-letter" data-position="1" data-bonus="double-letter">DL</div>
+                <div class="board-square normal" data-position="2"></div>
+                <div class="board-square normal" data-position="3"></div>
+                <div class="board-square double-word" data-position="4" data-bonus="double-word">DW</div>
+                <div class="board-square normal" data-position="5"></div>
+                <div class="board-square triple-letter" data-position="6" data-bonus="triple-letter">TL</div>
+                <div class="board-square normal" data-position="7"></div>
+                <div class="board-square normal" data-position="8"></div>
+            </div>
+        </div>
+
+        <!-- Tile Rack - where the player's 7 tiles live
+             Tiles are dynamically added here by JavaScript -->
+        <div id="rack-container">
+            <h3>Your Tiles</h3>
+            <div id="tile-rack"></div>
+        </div>
+
+        <!-- Game Controls - buttons to interact with the game -->
+        <div class="controls">
+            <button id="submit-word">Submit Word</button>
+            <button id="clear-board">Clear Board</button>
+            <button id="new-tiles">New Tiles</button>
+            <button id="restart-game">Restart Game</button>
+        </div>
+
+        <!-- Message area for feedback to the user -->
+        <div id="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
